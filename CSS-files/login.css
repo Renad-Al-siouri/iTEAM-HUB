@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+  --Gold: #EB7E40;
+  --Cyan: #106379;
+  --Desert-Rose: #FBE5D9;
+  --Light-Cyan: #21A8AA;
+  --Light-Gray: #DBDBDB;
+
+  --Black: #000000;
+  --White: #F3F3F3;
+}
+
+a{
+  text-decoration: none;
+  color: var(--White);
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color: var(--Desert-Rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Poppins", serif;
+}
+
+h1,h2,h3,h4,h5.h6{
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*===================================*/
+.container{
+  margin: auto;
+  background-color: var(--White);
+  width: 1200px;
+  max-width: 100%;
+  border-radius: 20px;
+  display: flex;
+  padding-block: 10px;
+}
+
+.login, .login-image{
+  width: 100%;
+  height: auto;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav img{
+  width: 40px;
+}
+.nav a:first-child{
+  color: var(--Gold);
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.nav a:last-child{
+  color: var(--Light-Cyan);
+}
+/**/
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+h2{
+  color: var(--Cyan);
+}
+
+input[type="text"], input[type="password"]{
+  background-color: var(--Gold);
+  border: none;
+  border-radius: 50px;
+  width: 400px;
+  padding-block: 15px;
+  outline: none;
+  text-align: center;
+  color: var(--White);
+}
+input:hover{
+  cursor: pointer;
+}
+input::placeholder{
+  color: var(--White);
+}
+
+.username, .password {
+  position: relative; 
+  margin-bottom: 25px;
+}
+
+.username i, .password i{
+  position: absolute; 
+  top: 12px;
+  left: 15px;
+  color: var(--White);
+}
+
+.username p, .password p{
+  position: absolute;
+  top: 35px; 
+  left: 15px;
+  color: red;
+  font-size: 12px;
+}
+
+.hidden{
+  display: none;
+}
+
+button{
+  width: 400px;
+  padding-block: 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--Light-Gray);
+  cursor: pointer;
+  color: var(--Light-Cyan);
+}
+
+.validation{
+  margin-top: 10px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--Light-Cyan);
+  font-size: 13px;
+}
+.left{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.validation > span:last-of-type{
+  cursor: pointer;
+  
+}
+
+/*========================
+==========================*/
+@media (max-width:950px) {
+h2{
+  color: var(--Cyan);
+  font-size: 18px;
+}
+
+input[type="text"], input[type="password"]{
+  width: 250px;
+  padding-block: 10px;
+}
+.username i, .password i{
+  position: absolute; 
+  top: 8px;
+  left: 15px;
+  color: var(--White);
+}
+button{
+  width: 250px;
+  padding-block: 10px;
+}
+.validation{
+  width: 250px;
+  font-size: 10px;
+}
+.username p, .password p{
+  top: 30px;
+  font-size: 10px;
+  
+}
+#error-message{
+  width: 270px;
+  left: 0px;
+}
+}
+
+/*======================
+=======================*/
+
+@media (max-width:649px) {
+
+
+.nav img{
+  width: 30px;
+}
+
+.nav a{
+  font-size: 15px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+h2{
+  color: var(--Cyan);
+}
+img{
+  width: 100%;
+}
+
+.login{
+  padding-top: 10px;
+  height: 400px;
+  justify-content: space-around;    
+}
+.login-image{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;    
+}
+
+}

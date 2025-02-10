@@ -1,0 +1,605 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+  --Gold: #EB7E40;
+  --Cyan: #106379;
+  --Desert-Rose: #FBE5D9;
+  --Light-Cyan: #21A8AA;
+  --Light-Gray: #DBDBDB;
+
+  --Black: #000000;
+  --White: #F3F3F3;
+}
+
+a{
+  text-decoration: none;
+  color: var(--White);
+}
+
+h1,h2,h3,h4,h5.h6{
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*===================
+    navbar and logo
+====================*/
+nav{
+  width: 100%;
+  padding: 10px 100px;
+  background-color: #106379;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+
+.logo a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  color: var(--Gold);
+}
+
+.logo-icon{
+  max-width: 40px;
+}
+
+
+.menu-head {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.menu-head a:hover{
+  color:#EB7E40;
+}
+
+.menu-purger i{
+  display: none;
+  font-size: 25px;
+  position: relative;
+  color: var(--Gold);
+}
+
+.menu-purger:hover{
+  cursor: pointer;
+}
+
+
+
+button{
+  width: 80px;
+  padding: 10px 15px;
+  background-color:#EB7E40;
+  border-radius: 20px;
+  font-weight: 700;
+  color: var(--White);
+  border: none;
+}
+
+ button:hover{
+  transform: translateY(-0.2px) scale(1.02); /* Lift effect */
+  box-shadow: 0px 4px 2px  rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/*================nav leftside==================*/
+.leftside-nav{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  background-color: var(--Cyan);
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.5s ease-in-out  ;
+}
+.leftside-nav.active{
+  transform: translateX(100%);
+}
+
+.leftside-nav .logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.logo i{
+  color: var(--Gold);
+  font-size: 25px;
+}
+.logo i:hover{
+  cursor: pointer;
+}
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  margin-top: -150px;
+  
+}
+.nav-links a:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.leftside-nav span
+{
+padding-bottom: 10px;
+color: var(--Light-Gray);
+}
+
+/*===================
+  End navbar and logo
+======================*/
+  
+  
+  
+/*=================
+About body content
+===================*/
+.about-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-block: 200px 150px;
+  font-weight: 600;
+  box-sizing: border-box;
+  }
+.about-container span{
+  color: var(--Gold);
+}
+.paragraph{
+  color: #106379;
+  text-align: center;
+  font-size: 25px;
+}
+
+.logo span{
+  color: #EB7E40;
+}
+.img{
+  width:500px ;
+  height: auto;
+  
+}
+    /*End About body content*/
+    
+  /*tital-paragraph-div*/
+  
+  .tital-paragraph-div{
+    width: 100%;
+    background-color: #FBE5D9;
+    text-align: center;
+    margin-top: 150px;
+    color: #106379;
+  }
+  .tital-paragraph-div span{
+    color: var(--Gold);
+  }
+
+.title{
+  padding-top: 20px;
+  }
+  
+  .t-papag{
+    padding-bottom: 20px;
+    font-weight: 400;
+    width: 35%;
+    margin: auto;
+    font-weight: 600;
+  }
+
+  /*End tital-paragraph-div*/
+  
+  
+  
+
+/*===========================
+    The Resources Section
+=============================*/
+
+.container{
+  margin-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,250px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.card{
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.card img{
+  width: 100%;
+  height: 80px;
+ }
+.card h3{
+  color: var(--Light-Cyan);
+  font-size: 1.2em;
+}
+.card p{
+  color: var(--Cyan);
+  font-size: 0.9em;
+  text-align: center;
+
+}
+
+.btn-card{
+  color: var(--White);
+  background-color: var(--Cyan);
+  border: none;
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  box-sizing:content-box;
+  padding: 5px;
+
+}
+
+.btn-card:hover {
+  background: linear-gradient(135deg, var(--Cyan), #005f73); /* Distinct gradient effect */
+  color: var(--White);
+  transform: translateY(-0.2px) scale(1.02); /* Lift effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+/*===========================
+   End of Resources Section
+=============================*/
+/*===========================
+   the footer Section
+=============================*/
+footer{
+  background-color: var(--Cyan);
+  position:static;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.first{
+  padding-inline: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-block: 10px;
+}
+
+.footer-icons i{
+  color: var(--White);
+  border-radius: 2px;
+  font-size: 20px;
+  padding: 1px;
+}
+
+.footer-icons i:hover{
+  background-color: var(--Gold);
+}
+.logo-footer{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-bottom: 10px;
+}
+.logo-footer img{
+  width: 25px;
+}
+.logo-footer span{
+  color: var(--Gold);
+}
+.first{
+  border-bottom: 1px solid var(--White);
+}
+.last{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--White);
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+.last span:last-child:hover{
+  cursor: pointer;
+}
+
+/*===========================
+   End of footer Section
+=============================*/
+
+
+
+
+  /*****************************************
+    media query for large screens
+
+  ******************************************/
+  @media (max-width: 1200px) and (min-width: 919px)
+  {
+  /*About body content*/
+  .about-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 200px 150px;
+    column-gap: 50px;
+    padding-inline:15px;
+    }
+
+  .paragraph{
+    font-size: 18px;
+  }
+  .t-papag{
+   
+    width: 40%;
+    
+  }
+
+  .img{
+    width:450px ;
+  }
+    /*End About body content*/
+
+  }
+
+/*****************************************
+   media query for medium screens
+******************************************/
+
+  @media (max-width: 920px) {
+    /*navbar and logo*/
+  nav{
+    padding: 10px 50px;
+    }
+    
+  .menu-head {
+    column-gap: 20px;
+  }
+
+  /*About body content*/
+  .about-container{
+    margin-block: 150px 100px;
+    box-sizing:border-box;
+    padding-inline: 50px;
+    column-gap: 30px;
+  }
+ 
+  .paragraph{
+    font-size: 13px;
+    line-height: 20px;
+  }
+ 
+  .img{
+    width:250px ;
+  }
+
+  /*tital-paragraph-div*/
+  
+  .tital-paragraph-div{
+    width: 100%;
+    background-color: #FBE5D9;
+    text-align: center;
+    margin-top: 100px;
+    color: #106379;
+  }
+  .t-papag{
+   
+    width: 80%;
+    
+  }
+
+  .title{
+   font-size: 1.3em;
+  }
+  .t-papag{
+    font-size: 13px;
+  }
+
+/*The Resources Section*/
+
+.container{
+  grid-template-columns: repeat(2,250px);
+ }
+
+}
+
+/***************************************
+    media query for medium screens
+****************************************/
+
+@media (max-width:674px)  {
+
+  /*navbar and logo*/
+    
+    .menu-head {
+      display: none;
+    }
+    /*menu purger*/
+    
+  .menu-purger i{
+     display: inline;
+  }
+    
+
+/*About body content*/
+    .about-container{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-block: 50px 100px;
+    }
+  .paragraph{
+    font-size: 15px;
+    margin-top: 50px;
+    
+  }
+  .paragraph span{
+    color: #EB7E40;
+  }
+  .img{
+    margin-top: 100px;
+  }
+
+  /*tital-paragraph-div*/
+  
+  .tital-paragraph-div{
+    margin-top: 100px;
+  }
+
+/*The Resources Section*/
+
+.container{
+  grid-template-columns: repeat(2,220px);
+}
+
+/*the footer Section*/
+
+
+.first{
+  padding-inline: 40px;
+}
+
+}
+
+
+/***************************************
+     media query for small screens
+****************************************/
+
+@media (max-width:499px) and (min-width:320px){
+  /*navbar and logo*/
+  nav{
+    padding: 10px 20px;
+    }
+    
+  .logo a img{
+    width: 30px;
+  }
+
+  .logo a span{
+    font-size: 12px;
+  }
+
+  /*About body content*/
+
+  .about-container{
+    margin-block: 10px 50px;
+    box-sizing:border-box;
+    padding-inline: 20px;
+    column-gap: 30px;
+  }
+  
+  .paragraph{
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .img{
+    width:250px ;
+  }
+
+/*tital-paragraph-div*/
+  
+  .tital-paragraph-div{
+    width: 100%;
+    background-color: #FBE5D9;
+    text-align: center;
+    margin-top: 100px;
+    color: #106379;
+    padding-inline: 20px;
+    box-sizing: border-box;
+  }
+  .title{
+   font-size: 15px;
+  }
+  .t-papag{
+    font-size: 10px;
+    
+  }
+
+
+/*The Resources Section*/
+
+.container{
+  grid-template-columns: repeat(1,220px);
+}
+
+/*the footer Section*/
+footer{
+  height: 80px;
+}
+
+.first{
+  padding-inline: 20px;
+  padding-block: 5px;
+}
+
+.footer-icons i{
+  font-size: 15px;
+}
+
+.footer-icons{
+  margin-bottom: 10px;
+}
+.logo-footer span{
+  font-size: 12px;
+}
+
+.last{
+  font-size: 10px;
+  padding-top: 10px;
+ }
+}
+
+
+
